@@ -1,0 +1,26 @@
+.main {
+  margin: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border-style: double;
+  border-radius: 5px;
+  padding: 20px;
+}
+.Peter {
+  color: blue
+}
+.Dana {
+  color: red
+}
+.Mayor {
+  color: green
+}
+.Ray {
+  color: magenta
+}
+.Egon {
+  color: orange
+}
+.Winston {
+  color: purple
+}
