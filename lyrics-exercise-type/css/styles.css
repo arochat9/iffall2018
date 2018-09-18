@@ -1,0 +1,143 @@
+body {
+  /* Disable scrollbars and ensure that the body fills the window */
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  background-color: #c4c2c2;
+}
+
+#header {
+  /* Provide scrollbars if needed and fix the header dimensions */
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  line-height: 60px;
+  background-color: rgba(255, 0, 0, .2)
+}
+#header h1 span.title {
+  color: #a03030;
+  font-weight: 100;
+  font-size: 2em;
+  letter-spacing: -.5rem;
+  text-transform: uppercase;
+}
+#main {
+  /* Provide scrollbars if needed, position below header, and derive height from top/bottom */
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+  top: 120px;
+  bottom: 0;
+}
+div.highlight {
+  margin-left: 20%;
+  margin-right: 20%;
+
+}
+div.big {
+  line-height: 1rem;
+}
+div.small {
+  line-height: .7rem;
+}
+div.highlight:hover {
+  background-color: rgba(255, 239, 153, .5);
+}
+.intro {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1em;
+  letter-spacing: 10px;
+  color: #429b95;
+}
+.chorus {
+  font-weight: 900;
+  font-size: 2em;
+  letter-spacing: 5px;
+  color: #288250;
+  /*line-height: -.4rem;*/
+}
+.verse {
+  font-size: 1.5em;
+  font-weight: 300;
+  font-style: italic;
+  color: #252d6d;
+}
+.bridge {
+  font-size: 1.8em;
+  color: #429b95;
+}
+span.parenthesis {
+  font-weight: 300;
+  font-style: italic;
+}
+span.name {
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #7c2826;
+}
+.shout {
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.groups {
+  margin: 20px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 50px;
+  background-color: white;
+}
+.plain_style {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: .8em;
+}
+div.groups .plain_style {
+  text-decoration: underline;
+}
+p#weight_black{
+  font-weight: 900;
+}
+p#weight_bold{
+  font-weight: 700;
+}
+p#weight_thin{
+  font-weight: 100;
+}
+p#style{
+  font-style: italic;
+}
+p#style_thin{
+  font-weight: 100;
+  font-style: italic;
+}
+p#spacing{
+  letter-spacing: 10px;
+}
+p#transform{
+  text-transform: uppercase;
+}
+p#decoration{
+  text-decoration: line-through;
+}
+
+h1 #main_select {
+  color: red;
+  font-weight: 100; /* how bold the font is */
+  font-size: 10rem; /* rem is relative to body, em is relative to local default*/
+  letter-spacing: -1rem;
+  text-transform: uppercase; /* lowercase, capitalize */
+}
+/*
+div.generic p a {
+  color: rgba(0,255,0,.5);
+}*/
