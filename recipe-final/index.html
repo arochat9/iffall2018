@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Recipe for Blueberry Pie</title>
+		<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="top">
+			<h1>Blueberry Pie</h1>
+		</div>
+		<ul class="horizontal">
+			<li><span><span class="lighter">Prep</span><br>15 <em class="lighter">Minutes</em></span></li>
+			<li><span><span class="lighter">Cook</span><br>50 <em class="lighter">Minutes</em></span></li>
+			<li><span><span class="lighter">Ready In</span><br>1<em class="lighter">h</em> 5<em class="lighter">m</em></span></li>
+		</ul>
+		<header>
+			<h2 class="lighter">Ingredients</h2>
+		</header>
+		<div class="container">
+			<img src="images/blueberriestransparent1.png" alt="Image of Blueberry Pie">
+			<ul class="list">
+			  <li><p>&frac34 cup white sugar</p></li>
+			  <li><p>3 tablespoons cornstarch</p></li>
+			  <li><p>&frac14 teaspoon salt</p></li>
+				<li><p>&frac12 teaspoon ground cinnamon</p></li>
+				<li><p>4 cups fresh blueberries</p></li>
+				<li><p>1 recipe pastry for a 9 inch double crust pie</p></li>
+				<li><p>1 tablespoon butter</p></li>
+			</ul>
+		</div>
+
+
+		<header>
+			<h2 class="lighter">Directions</h2>
+		</header>
+		<div class="container">
+			<img class="second" src="images/pietransparent2.png" alt="Image of Blueberry Pie">
+			<ol type="1" class="list">
+				<li><p>Preheat oven to 375 degrees F (190 degrees C).</p></li>
+				<li><p>Mix sugar, cornstarch, salt, and cinnamon, and sprinkle over blueberries.</p></li>
+				<li><p>Line pie dish with one pie crust. Pour berry mixture into the crust, and dot with butter. Cut remaining pastry into 1/2 - 3/4 inch wide strips, and make lattice top. Crimp and flute edges.</p></li>
+				<li><p>Bake pie on lower shelf of oven for about 50 minutes, or until crust is golden brown.</p></li>
+			</ol>
+		</div>
+
+		<div class="headline">
+			<button class="collapsible">Tips</button>
+			<div class="expanded">
+				<div class="center content">
+					<p>Aluminum foil can be used to keep food moist, cook it evenly, and make clean-up easier.</p>
+				</div>
+			</div>
+			<button class="collapsible">Nutrition Facts</button>
+			<div class="expanded">
+				<div class="center content">
+					<p>Per Serving: 366 calories; 16.6 g fat; 52.6 g carbohydrates; 3.3 g protein; 4 mg cholesterol; 318 mg sodium.</p>
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<ul>
+				<li>first background photo credits to <a href="https://www.bettycrocker.com/recipes/classic-blueberry-pie/78e913d6-7e53-4ee3-bec5-ca38083b70b0">Betty crocker</a></li>
+				<li>Blueberry photo credits to <a href="https://toppng.com/photo/11772/fresh-blueberries">Toppng photos</a></li>
+				<li>Pie slice photo credits to <a href="https://sweetbelmar.com/products/blueberry-pie-jar">Sweet belmar products</a></li>
+				<li>recipe site <a href="https://www.allrecipes.com/recipe/12196/blueberry-pie/">allrecipes.com</a></li>
+			</ul>
+		</footer>
+		<script>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+
+				coll[i].addEventListener("click", function() {
+
+					var $this = $(this).toggleClass('active');
+					var content = this.nextElementSibling;
+
+					if (content.style.maxHeight){
+						content.style.maxHeight = null;
+					} else {
+						content.style.maxHeight = content.scrollHeight + "px";
+					}
+				});
+			}
+		</script>
+	</body>
+</html>
