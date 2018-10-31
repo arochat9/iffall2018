@@ -1,0 +1,25 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.desktop {
+  width: 800px;
+}
+
+.phone {
+  width: 400px;
+}
+
+img {
+  border: 2px solid black;
+}
+
+h1 {
+  color: black;
+  margin: 0px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+}
