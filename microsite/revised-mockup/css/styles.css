@@ -67,25 +67,36 @@ body > .collapsible:nth-of-type(2) {
 }
 
 .active, .collapsible:hover {
-    background-color: #555;
+  background-color: #555;
 }
 
 .content {
-    font-size: 1.3em;
-    padding: 0 18px;
-    overflow: hidden;
-    background-color: #94d3ac;
-    /*display: none;*/
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
+  font-size: 1.3em;
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: #94d3ac;
+  /*display: none;*/
+  max-height: 0;
+  transition: max-height 0.9s ease-out; /*value should be 0.2s*/
 }
 .content:nth-of-type(1) {
   /*change display property for if the Yasuni Park Overview should be shown*/
   /*display: none;*/
   font-size: 1.5em;
   max-height: inherit;
+  transition: max-height 0.9s ease-in;
 }
-.content:nth-of-type(1) img {
+.content:nth-of-type(2) {
+  background-color: #c9e2d3;
+}
+.content:nth-of-type(3) {
+  background-color: #aee2c3;
+}
+.content:nth-of-type(4) {
+  background-color: #74c192;
+}
+
+.content img {
   /*opacity: .2;*/
   border: 1px solid white;
   margin-top: 20px;
@@ -93,27 +104,21 @@ body > .collapsible:nth-of-type(2) {
 }
 .right {
   float: right;
-  border: 1px solid white;
   margin-left: 20px;
   margin-right: 0px;
 }
 .right_big_margin {
   margin-left: 40px;
   margin-right: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 .left {
   float: left;
-  border: 1px solid white;
   margin-right: 20px;
   margin-left: 0px;
 }
 .left_big_margin {
   margin-right: 40px;
   margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 .clear {
   clear: both;
@@ -121,6 +126,29 @@ body > .collapsible:nth-of-type(2) {
 .fifty {
   width: 50%;
 }
+
+.content .sub_content {
+  background-color: #f9f9f9;
+  border: 2px solid black;
+  margin: 30px;
+}
+.content .sub_content p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.content .sub_content .right {
+  float: right;
+  border: none;
+  margin: 0px;
+  margin-left: 20px;
+}
+.content .sub_content .left {
+  float: left;
+  border: none;
+  margin: 0px;
+  margin-right: 20px;
+}
+
 
 .content .references {
     font-size: 15;
