@@ -12,35 +12,34 @@ body {
   padding: 0;
   margin: 0;
   background-color: #b4c7c9;
-  font-family: arial;
+  /*font-family: arial;*/
+  font-family: 'Roboto', sans-serif;
 }
 
 .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    /*padding-top: 60px;
-    padding-bottom: 60px;*/
-    height: 180px;
-    width: 100%;
-    border-bottom: 2px solid white;
-
-    text-align: center;
-    outline: none;
-    font-size: 50px;
-    font-weight: normal;
+  position: relative;
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  height: 180px;
+  width: 100%;
+  border-bottom: 2px solid white;
+  text-align: center;
+  outline: none;
+  font-size: 50px;
+  font-weight: normal;
 }
 body > .collapsible:nth-of-type(1) {
   height: 250px;
   /*photo from https://www.ltandc.org/napo-wildlife-center-yasuni-national-park-ecuador/*/
-  background-image: url('../images/yasuniBackground.jpg');
+  background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/yasuniBackgroundPC.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
 body > .collapsible:nth-of-type(2) {
   /*biodiversity5 from https://www.ltandc.org/napo-wildlife-center-yasuni-national-park-ecuador/*/
-  background-image: url('../images/biodiversity5.jpg');
+  background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/biodiversity5PC.jpg');
   /*biodiversity4 from https://phys.org/news/2014-02-peru-manu-national-biodiversity.html
   background-image: url('../images/biodiversity4.jpg');*/
   background-repeat: no-repeat;
@@ -49,14 +48,14 @@ body > .collapsible:nth-of-type(2) {
 }
 .collapsible:nth-of-type(3) {
   /*nativeGroups4 from https://www.smithsonianmag.com/travel/amazonian-rainforest-one-most-biodiverse-places-earth-180955364/*/
-  background-image: url('../images/nativeGroups4.jpg');
+  background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/nativeGroups4PC.jpg');
   background-repeat: no-repeat;
   background-position: center 50%;
   background-size: cover;
 }
 .collapsible:nth-of-type(4) {
   /*oil3 from https://www.audubon.org/magazine/winter-2016/as-oil-companies-dig-yasuni-national-park*/
-  background-image: url('../images/oil3.jpg');
+  background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/oil3PC.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -66,26 +65,45 @@ body > .collapsible:nth-of-type(2) {
   font-size: 1em;
   height: 80px;
 }
+@media (max-width: 700px) {
+  body > .collapsible:nth-of-type(1) {
+    background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/yasuniBackgroundPhone.jpg');
+  }
+  body > .collapsible:nth-of-type(2) {
+    background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/biodiversity5Phone.jpg');
+  }
+  .collapsible:nth-of-type(3) {
+    background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/nativeGroups4Phone.jpg');
+  }
+  .collapsible:nth-of-type(4) {
+    background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/oil3Phone.jpg');
+  }
+}
+
 
 .active, .collapsible:hover {
   background-color: #555;
 }
 
 .content {
-  font-size: 1.3em;
-  padding: 0 18px;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  font-weight: 300;
   overflow: hidden;
   background-color: #94d3ac;
   /*display: none;*/
   max-height: 0;
-  transition: max-height 0.9s ease-out; /*value should be 0.2s*/
+  transition: max-height 0.2s ease-out; /*value should be 0.2s*/
+  padding: 0 18px;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .content:nth-of-type(1) {
   /*change display property for if the Yasuni Park Overview should be shown*/
   /*display: none;*/
-  font-size: 1.5em;
+  /*font-size: 1.5em;*/
   max-height: inherit;
-  transition: max-height 0.9s ease-in;
+  transition: max-height 0.2s ease-in;
 }
 .content:nth-of-type(2) {
   background-color: #c9e2d3;
@@ -95,6 +113,12 @@ body > .collapsible:nth-of-type(2) {
 }
 .content:nth-of-type(4) {
   background-color: #74c192;
+}
+@media (max-width: 700px) {
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .content img {
@@ -121,14 +145,62 @@ body > .collapsible:nth-of-type(2) {
   margin-right: 40px;
   margin-left: 20px;
 }
+
 .clear {
   clear: both;
+}
+.inline {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 45%;
+  margin-left: 2%;
+  vertical-align: top;
 }
 .fifty {
   width: 50%;
 }
+@media (max-width: 700px) {
+  .right {
+    width: 100%;
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .right_big_margin {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .left {
+    float: none;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .left_big_margin {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .fifty {
+    width: 100%;
+  }
+}
 
-.content .sub_content {
+.verticalAlignContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.verticalAlign {
+  flex: 0 1 auto;
+  flex-shrink: 0;
+  align-self: center;
+  max-width: 50%;
+}
+.verticalAlignImage {
+  flex: 1 1 auto;
+  align-self: center;
+  width: 50%;
+}
+
+/*.content .sub_content {
   background-color: #f9f9f9;
   border: 2px solid black;
   margin: 30px;
@@ -148,19 +220,31 @@ body > .collapsible:nth-of-type(2) {
   border: none;
   margin: 0px;
   margin-right: 20px;
-}
+}*/
 
 
 .content .references {
-    font-size: 15;
-    padding: 0 18px;
-    display: block;
-    overflow: hidden;
-    background-color: white;
-    margin-bottom: 50px;
+  font-size: 15;
+  padding: 0 18px;
+  display: block;
+  overflow: hidden;
+  background-color: white;
+  margin-bottom: 50px;
 }
 
+p {
+  padding-top: 10px;
+}
+@media (max-width: 700px) {
+  p {
+    padding-top: 0px;
+    margin-top: 0px;
+    font-size: .8em;
+    line-height: 1.4em;
+  }
+}
 .sub_header {
   font-size: 1.3em;
+  line-height: 2em;
   font-weight: bold;
 }
