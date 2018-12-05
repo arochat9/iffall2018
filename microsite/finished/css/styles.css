@@ -16,6 +16,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.headline {
+  font-family: 'Holtwood One SC', serif;
+  color: #ffcc00;
+}
 .collapsible {
   position: relative;
   background-color: #777;
@@ -31,6 +35,7 @@ body {
 }
 body > .collapsible:nth-of-type(1) {
   height: 250px;
+  font-size: 80px;
   /*photo from https://www.ltandc.org/napo-wildlife-center-yasuni-national-park-ecuador/*/
   background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/yasuniBackgroundPC.jpg');
   background-repeat: no-repeat;
@@ -68,6 +73,10 @@ body > .collapsible:nth-of-type(2) {
 @media (max-width: 700px) {
   body > .collapsible:nth-of-type(1) {
     background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/yasuniBackgroundPhone.jpg');
+    font-size: 40px;
+  }
+  body > .collapsible {
+    font-size: 30px;
   }
   body > .collapsible:nth-of-type(2) {
     background-image: radial-gradient(rgba(0,0,0, .5) 20%, rgba(0,0,0,0)), url('../imagesFinal/biodiversity5Phone.jpg');
@@ -80,30 +89,39 @@ body > .collapsible:nth-of-type(2) {
   }
 }
 
-
 .active, .collapsible:hover {
   background-color: #555;
+}
+
+.content-wrapper {
+  overflow: hidden;
+  background-color: #182c09;
+  max-height: 0;
+  transition: max-height 0.2s ease-out; /*value should be 0.2s*/
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.content-wrapper:nth-of-type(1) {
+  max-height: inherit;
+  transition: max-height 0.2s ease-in;
 }
 
 .content {
   font-size: 1.2em;
   line-height: 1.4em;
   font-weight: 300;
-  overflow: hidden;
-  background-color: #94d3ac;
+  background-color: #aabe76;
   /*display: none;*/
-  max-height: 0;
-  transition: max-height 0.2s ease-out; /*value should be 0.2s*/
   padding: 0 18px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .content:nth-of-type(1) {
   /*change display property for if the Yasuni Park Overview should be shown*/
   /*display: none;*/
   /*font-size: 1.5em;*/
-  max-height: inherit;
-  transition: max-height 0.2s ease-in;
+  /*max-height: inherit;*/
+  /*transition: max-height 0.2s ease-in;*/
 }
 .content:nth-of-type(2) {
   background-color: #c9e2d3;
@@ -115,6 +133,9 @@ body > .collapsible:nth-of-type(2) {
   background-color: #74c192;
 }
 @media (max-width: 700px) {
+  .content-wrapper {
+    padding: 0;
+  }
   .content {
     padding-left: 20px;
     padding-right: 20px;
@@ -233,11 +254,15 @@ body > .collapsible:nth-of-type(2) {
 }
 
 p {
-  padding-top: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 @media (max-width: 700px) {
   p {
-    padding-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     margin-top: 0px;
     font-size: .8em;
     line-height: 1.4em;

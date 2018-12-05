@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Andrew Rochat</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main">
+      <ul class="top">
+        <li><a href="#home">Andrew</a><li>
+        <li><a href="#news">About</a><li>
+        <li><a href="#contact">Resume</a><li>
+        <li><a href="#about">Contact</a><li>
+      </ul>
+      <div id="wrapper">
+        <button onclick="location.href = 'cs-experience.html';" id="btn1">
+          <i class="fa fa-desktop"></i>
+          <p>Computer Science Experience</p>
+        </button> <!-- comsci experience -->
+        <button id="btn2">
+          <i class="fa fa-briefcase"></i>
+          <p>Finance Experience</p>
+        </button> <!-- finance experience OTHER OPTIONS, bank, bar-chart-o-->
+        <button id="btn3">
+          <i class="fa fa-users"></i>
+          <p>Leadership</p>
+        </button> <!-- leadership -->
+        <button id="btn4">
+          <i class="fa fa-folder"></i>
+          <p>Extracurricular Activities</p>
+        </button> <!-- extra curricular activites -->
+      </div>
+    </div>
+
+    <div id="cs-experience">
+
+    </div>
+
+    <script>
+      // $('#main').show();
+      // $('#cs-experience').hide();
+
+      // $("#SingleClick").click(function () {
+      //     alert("Single Click");
+      // });
+      //
+      // $("#btn1").click(function() {
+      //   alert("button");
+      //   $('#main').hide();
+      //   $('#cs-experience').show();
+      // }
+      $('#cs-experience').hide();
+      $("button").click(function() {
+        // alert("button");
+        $('#main').hide();
+        $('#cs-experience').show();
+          // $(this).css({
+            // position: 'fixed',
+            // top: 0,
+            // right: 0,
+            // 'width': '100%',
+            // 'height': '100%',
+            // zIndex: 999
+          // })
+          // $(this).removeAttr('style');
+          // $(this).addClass("fullscreen");
+          // $(this).className = "fullscreen";
+
+      });
+    </script>
+  </body>
+</html>
